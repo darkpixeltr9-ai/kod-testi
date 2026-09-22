@@ -3,584 +3,2008 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(+90)DarkMaster English - Dilin Gücü</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
+    <title>(+90)DarkMaster | Kendini Test Et</title>
+
+    <meta name="description"
+          content="(+90)DarkMaster English ile İngilizce düzensiz fiillerde kendini test et.">
+
+    <meta name="author" content="(+90)DarkPixel">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
     <style>
-        :root {
-            --bg: #020617;
-            --card: #1e293b;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-            --accent: #38bdf8;
-            --neon: #0ea5e9;
-            --v-color: #fbbf24;
-            --border: #334155;
-            --yt-red: #ff0000;
-            --warning: #f59e0b;
+
+        * {
+            box-sizing: border-box;
         }
 
-        * { box-sizing: border-box; }
-
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+            background: #0b1225;
+            color: white;
             min-height: 100vh;
         }
 
-        .container {
-            width: 100%;
-            max-width: 1000px;
-            margin-top: 10px;
+        /* ANA ARKA PLAN */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    rgba(37, 99, 235, 0.13),
+                    transparent 38%
+                ),
+                #0b1225;
         }
 
-        /* Mobil Uyumlu Üst Bilgi */
-        .top-info {
+
+        /* ÜST ALAN */
+
+        .top-container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 22px 25px;
+        }
+
+        .top-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-            padding: 10px 15px;
-            background: rgba(30, 41, 59, 0.4);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
-        .info-box {
-            display: flex;
+
+        .developer-title,
+        .support-title {
+            color: #60a5fa;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .developer-name {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .youtube-icon {
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+
+            background: #ff0000;
+            color: white;
+
+            width: 21px;
+            height: 15px;
+
+            border-radius: 5px;
+
+            font-size: 10px;
+
+            margin-right: 6px;
         }
 
-        .info-title {
-            font-size: 0.6rem;
-            text-transform: uppercase;
+        .support-email {
+            color: #93b4df;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+
+        /* ANA İÇERİK */
+
+        .main {
+            max-width: 900px;
+            margin: auto;
+            padding: 70px 20px 80px;
+            text-align: center;
+        }
+
+
+        /* ETİKET */
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 8px 15px;
+
+            border: 1px solid rgba(59,130,246,.45);
+            border-radius: 999px;
+
+            background: rgba(30,64,175,.18);
+
+            color: #60a5fa;
+
+            font-size: 11px;
+            font-weight: 700;
+
             letter-spacing: 1px;
-            color: var(--muted);
-            font-weight: 700;
+
+            margin-bottom: 28px;
         }
 
-        .info-value {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--accent);
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+
+            background: #3b82f6;
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 10px #3b82f6;
         }
 
-        /* Geliştirilme Aşaması Rozeti */
-        .dev-badge {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--warning);
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-size: 0.85rem;
+
+        /* BAŞLIK */
+
+        .main-title {
+            font-size: clamp(38px, 7vw, 64px);
             font-weight: 700;
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            margin: 0 auto 25px auto;
-            display: flex;
-            align-items: center;
+
+            letter-spacing: -2px;
+
+            line-height: 1;
+
+            margin: 0;
+
+            color: white;
+
+            text-shadow:
+                0 0 8px rgba(255,255,255,.5),
+                0 0 25px rgba(59,130,246,.45);
+        }
+
+        .main-title span {
+            color: #3b82f6;
+
+            font-style: italic;
+
+            text-shadow:
+                0 0 8px rgba(59,130,246,.8),
+                0 0 30px rgba(59,130,246,.4);
+        }
+
+
+        .subtitle {
+            margin-top: 25px;
+
+            color: #9caed0;
+
+            font-size: 15px;
+
+            font-style: italic;
+        }
+
+
+        /* TEST PANELİ */
+
+        .test-panel {
+
+            margin: 42px auto 0;
+
+            max-width: 650px;
+
+            padding: 28px;
+
+            border-radius: 16px;
+
+            border: 1px solid rgba(59,130,246,.42);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(30,64,175,.25),
+                    rgba(15,23,42,.65)
+                );
+
+            box-shadow:
+                0 0 25px rgba(37,99,235,.08),
+                inset 0 0 30px rgba(37,99,235,.04);
+        }
+
+
+        .panel-title {
+            font-size: 23px;
+            font-weight: 700;
+
+            margin-bottom: 7px;
+        }
+
+        .panel-description {
+            color: #8295b7;
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+
+
+        /* SEÇENEK BAŞLIKLARI */
+
+        .section-title {
+            text-align: left;
+
+            color: #91b8ef;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* SORU SAYISI */
+
+        .count-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
             gap: 10px;
-            width: fit-content;
-            text-align: center;
+
+            margin-bottom: 25px;
         }
 
-        .header {
-            text-align: center;
+
+        /* BUTONLAR */
+
+        .select-button {
+
+            border: 1px solid #263b60;
+
+            background: rgba(15,23,42,.7);
+
+            color: #aab9d3;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            transition: .2s;
+        }
+
+        .select-button:hover {
+
+            border-color: #3b82f6;
+
+            color: white;
+
+            transform: translateY(-1px);
+        }
+
+        .select-button.active {
+
+            background: rgba(37,99,235,.22);
+
+            border-color: #3b82f6;
+
+            color: white;
+
+            box-shadow:
+                0 0 15px rgba(59,130,246,.15);
+        }
+
+
+        /* TEST TİPİ */
+
+        .mode-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 28px;
+        }
+
+
+        /* BAŞLA */
+
+        .start-button {
+
+            width: 100%;
+
+            border: none;
+
+            border-radius: 11px;
+
+            padding: 15px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-weight: 700;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition: .2s;
+
+            box-shadow:
+                0 0 20px rgba(37,99,235,.2);
+        }
+
+        .start-button:hover {
+
+            background: #3b82f6;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 0 25px rgba(37,99,235,.3);
+        }
+
+
+        /* TEST EKRANI */
+
+        #testScreen,
+        #resultScreen {
+
+            display: none;
+        }
+
+
+        .progress-area {
+
+            max-width: 650px;
+
+            margin: 0 auto 18px;
+
+            text-align: left;
+        }
+
+        .progress-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #7e91b5;
+
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+
+            width: 100%;
+
+            height: 5px;
+
+            background: #18243b;
+
+            border-radius: 99px;
+
+            overflow: hidden;
+        }
+
+        .progress-fill {
+
+            height: 100%;
+
+            width: 0%;
+
+            background: #3b82f6;
+
+            box-shadow: 0 0 10px #3b82f6;
+
+            transition: .3s;
+        }
+
+
+        /* SORU KARTI */
+
+        .question-card {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 35px 28px;
+
+            border: 1px solid rgba(59,130,246,.38);
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(25,48,90,.55),
+                    rgba(15,23,42,.72)
+                );
+
+            box-shadow:
+                0 0 30px rgba(37,99,235,.07);
+        }
+
+
+        .question-type {
+
+            color: #60a5fa;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .question {
+
+            font-size: 42px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+
+            word-break: break-word;
+
+            text-shadow:
+                0 0 15px rgba(59,130,246,.18);
+        }
+
+
+        .question-hint {
+
+            color: #647795;
+
+            font-size: 12px;
+
             margin-bottom: 30px;
         }
 
-        .header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(1.8rem, 8vw, 3.5rem); 
-            font-weight: 900;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            color: #fff;
-            text-shadow: 0 0 10px var(--neon);
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+
+        /* CEVAPLAR */
+
+        .answers {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
         }
 
-        .header h1 span {
-            font-style: italic;
-            color: var(--accent);
-        }
 
-        .slogan {
-            color: var(--muted);
-            font-size: clamp(0.9rem, 4vw, 1.1rem);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, var(--muted), var(--accent), var(--muted));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .answer-button {
 
-        .input-section {
-            position: sticky;
-            top: 10px;
-            z-index: 100;
-            background-color: var(--bg);
-            padding-bottom: 20px;
-        }
+            border: 1px solid #263b60;
 
-        textarea {
-            width: 100%;
-            background: #0f172a;
-            border: 2px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            color: var(--text);
-            font-size: 1.1rem;
-            resize: none;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
+            background: rgba(7,14,29,.7);
 
-        textarea:focus {
-            outline: none;
-            border-color: var(--neon);
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
-        }
+            color: #d6e0f2;
 
-        .sentence-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: clamp(20px, 5vw, 40px);
-            margin-bottom: 25px;
-            animation: fadeIn 0.4s ease-out;
-        }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        .variant {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: rgba(2, 6, 23, 0.4);
-            border-left: 4px solid var(--neon);
             border-radius: 10px;
+
+            padding: 17px 12px;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: .2s;
         }
 
-        .v-tag {
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 6px;
-            display: block;
-            text-transform: uppercase;
+
+        .answer-button:hover {
+
+            border-color: #3b82f6;
+
+            background: rgba(37,99,235,.12);
+
+            transform: translateY(-2px);
         }
 
-        .sentence-text {
-            font-size: clamp(1.1rem, 4vw, 1.5rem);
-            color: var(--text);
-            line-height: 1.4;
+
+        .answer-button.correct {
+
+            border-color: #22c55e;
+
+            background: rgba(34,197,94,.12);
+
+            color: #86efac;
         }
 
-        .highlight {
-            color: var(--v-color);
-            font-weight: 800;
+
+        .answer-button.wrong {
+
+            border-color: #ef4444;
+
+            background: rgba(239,68,68,.12);
+
+            color: #fca5a5;
         }
 
-        .subject-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            background: var(--neon);
-            color: #fff;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            font-weight: 800;
+
+        .answer-button:disabled {
+
+            cursor: default;
+        }
+
+
+        .feedback {
+
+            min-height: 28px;
+
+            margin-top: 20px;
+
+            font-weight: 700;
+
+            font-size: 14px;
+        }
+
+
+        .next-button {
+
+            width: 100%;
+
+            margin-top: 15px;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: none;
+        }
+
+
+        /* SONUÇ */
+
+        .result-card {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 40px 25px;
+
+            border: 1px solid rgba(59,130,246,.4);
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(25,48,90,.55),
+                    rgba(15,23,42,.72)
+                );
+        }
+
+
+        .result-icon {
+
+            font-size: 50px;
+
             margin-bottom: 12px;
         }
 
-        .support-card, .link-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-direction: row;
+
+        .result-title {
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
         }
 
-        .link-card {
-            margin-top: 40px;
-            border-color: var(--neon);
+
+        .result-score {
+
+            color: #3b82f6;
+
+            font-size: 55px;
+
+            font-weight: 700;
+
+            margin: 15px 0 4px;
+
+            text-shadow:
+                0 0 20px rgba(59,130,246,.4);
         }
+
+
+        .result-percent {
+
+            color: #91a4c5;
+
+            margin-bottom: 30px;
+        }
+
+
+        .wrong-list {
+
+            text-align: left;
+
+            margin-top: 25px;
+        }
+
+
+        .wrong-item {
+
+            border-bottom: 1px solid #1d2b45;
+
+            padding: 13px 0;
+        }
+
+
+        .wrong-question {
+
+            font-weight: 700;
+
+            color: white;
+        }
+
+
+        .wrong-your {
+
+            color: #f87171;
+
+            font-size: 12px;
+
+            margin-top: 4px;
+        }
+
+
+        .wrong-correct {
+
+            color: #4ade80;
+
+            font-size: 12px;
+
+            margin-top: 2px;
+        }
+
+
+        .result-buttons {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+
+            margin-top: 28px;
+        }
+
+
+        .secondary-button {
+
+            border: 1px solid #29405f;
+
+            background: rgba(15,23,42,.7);
+
+            color: #b5c5df;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            font-size: 13px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+        }
+
+
+        .secondary-button:hover {
+
+            border-color: #3b82f6;
+
+            color: white;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            text-align: center;
+
+            color: #536784;
+
+            font-size: 11px;
+
+            padding: 25px 20px;
+
+            border-top: 1px solid rgba(59,130,246,.12);
+        }
+
+
+        /* MOBİL */
 
         @media (max-width: 600px) {
-            .support-card, .link-card { flex-direction: column; text-align: center; }
-            .top-info { justify-content: center; text-align: center; }
-        }
 
-        .support-icon, .link-icon { color: var(--accent); flex-shrink: 0; }
-        .support-content h4, .link-content h4 { margin: 0 0 5px 0; font-size: 1rem; }
-        .support-content p, .link-content p { margin: 0; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
-        
-        .external-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 1px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .external-link:hover {
-            border-bottom-color: var(--accent);
-            text-shadow: 0 0 8px var(--accent);
-        }
+            .top-bar {
+                align-items: flex-start;
+            }
 
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--muted);
-            border: 2px dashed var(--border);
-            border-radius: 20px;
-            font-size: 1rem;
-        }
-        /* Uygulama indirme sitesi butonu */
-        .app-download-button {
-            margin: 18px auto 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: fit-content;
-            min-width: 275px;
-            padding: 13px 24px;
-            border-radius: 13px;
-            background: linear-gradient(135deg, #2563eb, var(--neon));
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.98rem;
-            letter-spacing: .2px;
-            border: 1px solid rgba(56, 189, 248, .55);
-            box-shadow: 0 0 18px rgba(14, 165, 233, .22);
-            transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
-        }
+            .support-email {
+                font-size: 10px;
+            }
 
-        .app-download-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 28px rgba(14, 165, 233, .45);
-            filter: brightness(1.08);
-        }
+            .main {
+                padding-top: 50px;
+            }
 
-        .app-download-button svg {
-            flex-shrink: 0;
+            .test-panel,
+            .question-card,
+            .result-card {
+                padding: 24px 18px;
+            }
+
+            .mode-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .answers {
+                grid-template-columns: 1fr;
+            }
+
+            .result-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .question {
+                font-size: 35px;
+            }
+
+            .main-title {
+                font-size: 40px;
+            }
         }
 
     </style>
 </head>
+
+
 <body>
 
-<div class="container">
-    <div class="top-info">
-        <div class="info-box">
-            <div style="color:var(--yt-red)">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
+<div class="background"></div>
+
+
+<!-- ÜST BÖLÜM -->
+
+<header>
+
+    <div class="top-container">
+
+        <div class="top-bar">
+
+            <div>
+
+                <div class="developer-title">
+                    GELİŞTİRİCİ
+                </div>
+
+                <div class="developer-name">
+
+                    <span class="youtube-icon">▶</span>
+
+                    +90DARKPIXEL
+
+                </div>
+
             </div>
-            <div class="info-text">
-                <div class="info-title">Geliştirici</div>
-                <div class="info-value">+90DarkPixel</div>
+
+
+            <div style="text-align:right">
+
+                <div class="support-title">
+                    DESTEK HATTI
+                </div>
+
+                <div class="support-email">
+                    h77412274@gmail.com
+                </div>
+
             </div>
+
         </div>
-        <div class="info-box">
-            <div class="info-text" style="text-align: right;">
-                <div class="info-title">Destek</div>
-                <div class="info-value">h77412274@gmail.com</div>
-            </div>
-        </div>
+
     </div>
 
-    <div class="header">
-        <h1>(+90)DarkMaster <span>English</span></h1>
-        <p class="slogan">İngilizce 1. hal girin, gerisini V2 ve V3 yapsın!</p>
+</header>
 
-        <!-- CÜMLE UYGULAMASI YÖNLENDİRME BUTONU -->
-        <a href="BURAYA-CUMLE-UYGULAMASI-INDIRME-SITESI-LINKINI-YAZ" target="_blank" class="app-download-button">
-            <span style="font-size:1.05rem;">📱</span>
-            (+90)DME Cümle Uygulaması
+
+
+<!-- ANA -->
+
+<main class="main">
+
+
+    <!-- BAŞLANGIÇ -->
+
+    <section id="startScreen">
+
+        <div class="badge">
+
+            <span class="badge-dot"></span>
+
+            İNGİLİZCE FİİL TESTİ
+
+        </div>
+
+
+        <h1 class="main-title">
+
+            (+90)DARKMASTER
+            <span>ENGLISH</span>
+
+        </h1>
+
+
+        <p class="subtitle">
+
+            Düzensiz fiillerde bilgini test et ve
+            <b>ne kadar öğrendiğini gör.</b>
+
+        </p>
+
+        <!-- SORU UYGULAMASI İNDİRME SİTESİ -->
+        <a
+            href="BURAYA-SORU-UYGULAMASI-INDIRME-SITESI-LINKINI-YAZ"
+            target="_blank"
+            style="
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                gap:9px;
+                margin-top:18px;
+                padding:12px 22px;
+                border-radius:999px;
+                border:1px solid rgba(59,130,246,.45);
+                background:rgba(30,64,175,.18);
+                color:#60a5fa;
+                text-decoration:none;
+                font-size:13px;
+                font-weight:700;
+                letter-spacing:1px;
+                box-shadow:0 0 18px rgba(59,130,246,.10);
+                transition:.2s;
+            "
+            onmouseover="this.style.background='rgba(37,99,235,.28)';this.style.borderColor='#3b82f6';this.style.color='white';this.style.transform='translateY(-2px)'"
+            onmouseout="this.style.background='rgba(30,64,175,.18)';this.style.borderColor='rgba(59,130,246,.45)';this.style.color='#60a5fa';this.style.transform='translateY(0)'"
+        >
+            📱 (+90)DME Soru Uygulaması
         </a>
-    </div>
-
-    <div class="input-section">
-        <textarea id="ti" rows="2" placeholder="Cümleyi girin... (I go school / She does the job / They play football)" oninput="processEnglishSentence()"></textarea>
-    </div>
-
-    <div id="res" class="result-container">
-        <div class="empty-state">Düzensiz (180+) veya düzenli, tüm fiilleri doğru çekimleyebilirim...</div>
-    </div>
 
 
 
-    <!-- KELİME SİTEMİZ BÖLÜMÜ -->
-    <div class="link-card">
-        <div class="link-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        <div class="test-panel">
+
+            <div class="panel-title">
+                🧠 KENDİNİ TEST ET
+            </div>
+
+            <div class="panel-description">
+                Hazırsan testini oluştur ve başlayalım.
+            </div>
+
+
+            <!-- SORU SAYISI -->
+
+            <div class="section-title">
+                SORU SAYISI
+            </div>
+
+            <div class="count-grid">
+
+                <button
+                    class="select-button active"
+                    id="count10"
+                    onclick="selectCount(10)"
+                >
+                    10 Soru
+                </button>
+
+                <button
+                    class="select-button"
+                    id="count20"
+                    onclick="selectCount(20)"
+                >
+                    20 Soru
+                </button>
+
+                <button
+                    class="select-button"
+                    id="count30"
+                    onclick="selectCount(30)"
+                >
+                    30 Soru
+                </button>
+
+            </div>
+
+
+
+            <!-- TEST TÜRÜ -->
+
+            <div class="section-title">
+                TEST TÜRÜ
+            </div>
+
+            <div class="mode-grid">
+
+                <button
+                    class="select-button active"
+                    id="modeMixed"
+                    onclick="selectMode('mixed')"
+                >
+                    🎲 Karışık
+                </button>
+
+
+                <button
+                    class="select-button"
+                    id="modeV2"
+                    onclick="selectMode('v2')"
+                >
+                    V1 → V2
+                </button>
+
+
+                <button
+                    class="select-button"
+                    id="modeV3"
+                    onclick="selectMode('v3')"
+                >
+                    V1 → V3
+                </button>
+
+
+                <button
+                    class="select-button"
+                    id="modeTR"
+                    onclick="selectMode('tr')"
+                >
+                    Türkçe → V1
+                </button>
+
+            </div>
+
+
+
+            <button
+                class="start-button"
+                onclick="startTest()"
+            >
+                🚀 TESTE BAŞLA
+            </button>
+
         </div>
-        <div class="link-content">
-            <h4>KELİME SİTEMİZ</h4>
-            <p>Diğer kaynaklarımıza göz atın: <a href="https://darkpixeltr9-ai.github.io/Ingilizce-halleri-2/" target="_blank" class="external-link">https://darkpixeltr9-ai.github.io/Ingilizce-halleri-2/</a></p>
-        </div>
-    </div>
 
-    <div class="support-card">
-        <div class="support-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </section>
+
+
+
+    <!-- TEST EKRANI -->
+
+    <section id="testScreen">
+
+
+        <div class="progress-area">
+
+            <div class="progress-top">
+
+                <span id="questionNumber">
+                    Soru 1 / 10
+                </span>
+
+                <span id="scoreText">
+                    Puan: 0
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
         </div>
-        <div class="support-content">
-            <h4>Bize Bildirin</h4>
-            <p>Bir hata veya listede olmayan bir fiil fark ederseniz lütfen destek hattından bize ulaşın.</p>
+
+
+
+        <div class="question-card">
+
+
+            <div
+                class="question-type"
+                id="questionType"
+            >
+                V1 → V2
+            </div>
+
+
+            <div
+                class="question"
+                id="question"
+            >
+                go
+            </div>
+
+
+            <div class="question-hint">
+                Doğru cevabı seç.
+            </div>
+
+
+            <div
+                class="answers"
+                id="answers"
+            ></div>
+
+
+            <div
+                class="feedback"
+                id="feedback"
+            ></div>
+
+
+            <button
+                class="next-button"
+                id="nextButton"
+                onclick="nextQuestion()"
+            >
+                SONRAKİ SORU →
+            </button>
+
         </div>
-    </div>
-</div>
+
+    </section>
+
+
+
+    <!-- SONUÇ -->
+
+    <section id="resultScreen">
+
+
+        <div class="result-card">
+
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+
+            <div class="result-title">
+                Test Tamamlandı!
+            </div>
+
+
+            <div class="result-score"
+                 id="finalScore">
+                0 / 10
+            </div>
+
+
+            <div
+                class="result-percent"
+                id="percentage"
+            >
+                %0 Başarı
+            </div>
+
+
+            <div
+                class="wrong-list"
+                id="wrongList"
+            ></div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    class="start-button"
+                    onclick="restartTest()"
+                >
+                    🔄 TEKRAR ÇÖZ
+                </button>
+
+
+                <a
+                    href="https://darkpixeltr9-ai.github.io/İngilizce-halleri-2/"
+                    class="secondary-button"
+                >
+                    📚 FİİL SÖZLÜĞÜ
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    © 2026 +90DarkPixel • (+90)DarkMaster English
+
+</footer>
+
+
 
 <script>
-// 180+ DÜZENSİZ FİİL LİSTESİ
-const irregularVerbs = {
-    "abide": { v2: "abode", v3: "abode", tr: "uymak" },
-    "arise": { v2: "arose", v3: "arisen", tr: "ortaya çıkmak" },
-    "awake": { v2: "awoke", v3: "awoken", tr: "uyanmak" },
-    "be": { v2: "was/were", v3: "been", tr: "olmak" },
-    "am": { v2: "was", v3: "been", tr: "olmak" },
-    "is": { v2: "was", v3: "been", tr: "olmak" },
-    "are": { v2: "were", v3: "been", tr: "olmak" },
-    "bear": { v2: "bore", v3: "born", tr: "katlanmak/doğurmak" },
-    "beat": { v2: "beat", v3: "beaten", tr: "vurmak/yenmek" },
-    "become": { v2: "became", v3: "become", tr: "haline gelmek" },
-    "begin": { v2: "began", v3: "begun", tr: "başlamak" },
-    "bend": { v2: "bent", v3: "bent", tr: "bükmek" },
-    "bet": { v2: "bet", v3: "bet", tr: "bahse girmek" },
-    "bid": { v2: "bid", v3: "bid", tr: "teklif vermek" },
-    "bind": { v2: "bound", v3: "bound", tr: "bağlamak" },
-    "bite": { v2: "bit", v3: "bitten", tr: "ısırmak" },
-    "bleed": { v2: "bled", v3: "bled", tr: "kanamak" },
-    "blow": { v2: "blew", v3: "blown", tr: "esmek/üflemek" },
-    "break": { v2: "broke", v3: "broken", tr: "kırmak" },
-    "breed": { v2: "bred", v3: "bred", tr: "yetiştirmek" },
-    "bring": { v2: "brought", v3: "brought", tr: "getirmek" },
-    "build": { v2: "built", v3: "built", tr: "inşa etmek" },
-    "burn": { v2: "burnt", v3: "burnt", tr: "yakmak" },
-    "burst": { v2: "burst", v3: "burst", tr: "patlamak" },
-    "buy": { v2: "bought", v3: "bought", tr: "satın almak" },
-    "can": { v2: "could", v3: "been able to", tr: "yapabilmek" },
-    "cast": { v2: "cast", v3: "cast", tr: "atmak" },
-    "catch": { v2: "caught", v3: "caught", tr: "yakalamak" },
-    "choose": { v2: "chose", v3: "chosen", tr: "seçmek" },
-    "cling": { v2: "clung", v3: "clung", tr: "yapışmak" },
-    "come": { v2: "came", v3: "come", tr: "gelmek" },
-    "cost": { v2: "cost", v3: "cost", tr: "mal olmak" },
-    "creep": { v2: "crept", v3: "crept", tr: "sürünmek" },
-    "cut": { v2: "cut", v3: "cut", tr: "kesmek" },
-    "deal": { v2: "dealt", v3: "dealt", tr: "ilgilenmek" },
-    "dig": { v2: "dug", v3: "dug", tr: "kazmak" },
-    "do": { v2: "did", v3: "done", tr: "yapmak" },
-    "draw": { v2: "drew", v3: "drawn", tr: "çizmek" },
-    "dream": { v2: "dreamt", v3: "dreamt", tr: "rüya görmek" },
-    "drink": { v2: "drank", v3: "drunk", tr: "içmek" },
-    "drive": { v2: "drove", v3: "driven", tr: "sürmek" },
-    "eat": { v2: "ate", v3: "eaten", tr: "yemek" },
-    "fall": { v2: "fell", v3: "fallen", tr: "düşmek" },
-    "feed": { v2: "fed", v3: "fed", tr: "beslemek" },
-    "feel": { v2: "felt", v3: "felt", tr: "hissetmek" },
-    "fight": { v2: "fought", v3: "fought", tr: "savaşmak" },
-    "find": { v2: "found", v3: "found", tr: "bulmak" },
-    "fly": { v2: "flew", v3: "flown", tr: "uçmak" },
-    "forbid": { v2: "forbade", v3: "forbidden", tr: "yasaklamak" },
-    "forget": { v2: "forgot", v3: "forgotten", tr: "unutmak" },
-    "forgive": { v2: "forgave", v3: "forgiven", tr: "affetmek" },
-    "freeze": { v2: "froze", v3: "frozen", tr: "donmak" },
-    "get": { v2: "got", v3: "got/gotten", tr: "almak" },
-    "give": { v2: "gave", v3: "given", tr: "vermek" },
-    "go": { v2: "went", v3: "gone", tr: "gitmek" },
-    "grow": { v2: "grew", v3: "grown", tr: "büyümek" },
-    "hang": { v2: "hung", v3: "hung", tr: "asmak" },
-    "have": { v2: "had", v3: "had", tr: "sahip olmak" },
-    "hear": { v2: "heard", v3: "heard", tr: "duymak" },
-    "hide": { v2: "hid", v3: "hidden", tr: "saklamak" },
-    "hit": { v2: "hit", v3: "hit", tr: "vurmak" },
-    "hold": { v2: "held", v3: "held", tr: "tutmak" },
-    "hurt": { v2: "hurt", v3: "hurt", tr: "incitmek" },
-    "keep": { v2: "kept", v3: "kept", tr: "tutmak/saklamak" },
-    "know": { v2: "knew", v3: "known", tr: "bilmek" },
-    "lay": { v2: "laid", v3: "laid", tr: "yaymak" },
-    "lead": { v2: "led", v3: "led", tr: "yol göstermek" },
-    "lean": { v2: "leant", v3: "leant", tr: "yaslanmak" },
-    "learn": { v2: "learnt", v3: "learnt", tr: "öğrenmek" },
-    "leave": { v2: "left", v3: "left", tr: "ayrılmak" },
-    "lend": { v2: "lent", v3: "lent", tr: "ödünç vermek" },
-    "let": { v2: "let", v3: "let", tr: "izin vermek" },
-    "lie": { v2: "lay", v3: "lain", tr: "uzanmak" },
-    "light": { v2: "lit", v3: "lit", tr: "ışık yakmak" },
-    "lose": { v2: "lost", v3: "lost", tr: "kaybetmek" },
-    "make": { v2: "made", v3: "made", tr: "yapmak" },
-    "mean": { v2: "meant", v3: "meant", tr: "anlamına gelmek" },
-    "meet": { v2: "met", v3: "met", tr: "buluşmak" },
-    "pay": { v2: "paid", v3: "paid", tr: "ödemek" },
-    "put": { v2: "put", v3: "put", tr: "koymak" },
-    "read": { v2: "read", v3: "read", tr: "okumak" },
-    "ride": { v2: "rode", v3: "ridden", tr: "binmek" },
-    "ring": { v2: "rang", v3: "rung", tr: "çalmak (zil)" },
-    "rise": { v2: "rose", v3: "risen", tr: "yükselmek" },
-    "run": { v2: "ran", v3: "run", tr: "koşmak" },
-    "say": { v2: "said", v3: "said", tr: "söylemek" },
-    "see": { v2: "saw", v3: "seen", tr: "görmek" },
-    "sell": { v2: "sold", v3: "sold", tr: "satmak" },
-    "send": { v2: "sent", v3: "sent", tr: "göndermek" },
-    "set": { v2: "set", v3: "set", tr: "kurmak" },
-    "shake": { v2: "shook", v3: "shaken", tr: "sallamak" },
-    "shine": { v2: "shone", v3: "shone", tr: "parlamak" },
-    "shoot": { v2: "shot", v3: "shot", tr: "ateş etmek" },
-    "show": { v2: "showed", v3: "shown", tr: "göstermek" },
-    "shut": { v2: "shut", v3: "shut", tr: "kapatmak" },
-    "sing": { v2: "sang", v3: "sung", tr: "şarkı söylemek" },
-    "sink": { v2: "sank", v3: "sunk", tr: "batmak" },
-    "sit": { v2: "sat", v3: "sat", tr: "oturmak" },
-    "sleep": { v2: "slept", v3: "slept", tr: "uyumak" },
-    "slide": { v2: "slid", v3: "slid", tr: "kaymak" },
-    "smell": { v2: "smelt", v3: "smelt", tr: "koklamak" },
-    "speak": { v2: "spoke", v3: "spoken", tr: "konuşmak" },
-    "speed": { v2: "sped", v3: "sped", tr: "hızlanmak" },
-    "spell": { v2: "spelt", v3: "spelt", tr: "hecelemek" },
-    "spend": { v2: "spent", v3: "spent", tr: "harcamak" },
-    "spill": { v2: "spilt", v3: "spilt", tr: "dökmek" },
-    "spin": { v2: "spun", v3: "spun", tr: "dönmek" },
-    "spit": { v2: "spat", v3: "spat", tr: "tükürmek" },
-    "split": { v2: "split", v3: "split", tr: "bölmek" },
-    "spread": { v2: "spread", v3: "spread", tr: "yaymak" },
-    "spring": { v2: "sprang", v3: "sprung", tr: "sıçramak" },
-    "stand": { v2: "stood", v3: "stood", tr: "ayakta durmak" },
-    "steal": { v2: "stole", v3: "stolen", tr: "çalmak" },
-    "stick": { v2: "stuck", v3: "stuck", tr: "yapışmak" },
-    "sting": { v2: "stung", v3: "stung", tr: "sokmak (arı)" },
-    "strike": { v2: "struck", v3: "struck", tr: "çarpmak" },
-    "swear": { v2: "swore", v3: "sworn", tr: "küfretmek/yemin etmek" },
-    "sweep": { v2: "swept", v3: "swept", tr: "süpürmek" },
-    "swim": { v2: "swam", v3: "swum", tr: "yüzmek" },
-    "swing": { v2: "swung", v3: "swung", tr: "sallanmak" },
-    "take": { v2: "took", v3: "taken", tr: "almak" },
-    "teach": { v2: "taught", v3: "taught", tr: "öğretmek" },
-    "tear": { v2: "tore", v3: "torn", tr: "yırtmak" },
-    "tell": { v2: "told", v3: "told", tr: "anlatmak" },
-    "think": { v2: "thought", v3: "thought", tr: "düşünmek" },
-    "throw": { v2: "threw", v3: "thrown", tr: "fırlatmak" },
-    "understand": { v2: "understood", v3: "understood", tr: "anlamak" },
-    "wake": { v2: "woke", v3: "woken", tr: "uyanmak" },
-    "wear": { v2: "wore", v3: "worn", tr: "giymek" },
-    "win": { v2: "won", v3: "won", tr: "kazanmak" },
-    "write": { v2: "wrote", v3: "written", tr: "yazmak" }
-};
 
-const subjects = ["i", "you", "we", "they", "he", "she", "it"];
 
-// Düzenli fiil çekimleyici
-function conjugateRegular(verb) {
-    if (verb.endsWith('e')) return verb + 'd';
-    if (verb.endsWith('y') && !/[aeiou]/.test(verb[verb.length - 2])) return verb.slice(0, -1) + 'ied';
-    if (verb.length > 2 && /[^aeiou][aeiou][^aeiou]/.test(verb.slice(-3)) && !/[wxy]/.test(verb.slice(-1))) {
-        return verb + verb.slice(-1) + 'ed';
-    }
-    return verb + 'ed';
+/* ==================================================
+   FİİLLER
+   ================================================== */
+
+const verbs = [
+
+    { v1: "abide", v2: "abode/abided", v3: "abode/abided", tr: "uymak, kalmak", pron: "/əˈbaɪd/" },
+            { v1: "arise", v2: "arose", v3: "arisen", tr: "ortaya çıkmak", pron: "/əˈraɪz/" },
+            { v1: "awake", v2: "awoke", v3: "awoken", tr: "uyanmak", pron: "/əˈweɪk/" },
+            { v1: "be", v2: "was/were", v3: "been", tr: "olmak", pron: "/biː/" },
+            { v1: "bear", v2: "bore", v3: "born/borne", tr: "katlanmak, taşımak", pron: "/beə(r)/" },
+            { v1: "beat", v2: "beat", v3: "beaten", tr: "vurmak, yenmek", pron: "/biːt/" },
+            { v1: "become", v2: "became", v3: "become", tr: "olmak, dönüşmek", pron: "/bɪˈkʌm/" },
+            { v1: "befall", v2: "befell", v3: "befallen", tr: "başına gelmek", pron: "/bɪˈfɔːl/" },
+            { v1: "beget", v2: "begot", v3: "begotten", tr: "yol açmak, babalık etmek", pron: "/bɪˈɡet/" },
+            { v1: "begin", v2: "began", v3: "begun", tr: "başlamak", pron: "/bɪˈɡɪn/" },
+            { v1: "behold", v2: "beheld", v3: "beheld", tr: "gözlemlemek, bakmak", pron: "/bɪˈhəʊld/" },
+            { v1: "bend", v2: "bent", v3: "bent", tr: "eğmek, bükmek", pron: "/bend/" },
+            { v1: "bereave", v2: "bereft", v3: "bereft", tr: "mahrum bırakmak", pron: "/bɪˈriːv/" },
+            { v1: "beseech", v2: "besought", v3: "besought", tr: "yalvarmak", pron: "/bɪˈsiːtʃ/" },
+            { v1: "beset", v2: "beset", v3: "beset", tr: "kuşatmak", pron: "/bɪˈset/" },
+            { v1: "bespeak", v2: "bespoke", v3: "bespoken", tr: "belirtmek", pron: "/bɪˈspiːk/" },
+            { v1: "bestride", v2: "bestrode", v3: "bestridden", tr: "iki yanına binmek", pron: "/bɪˈstraɪd/" },
+            { v1: "bet", v2: "bet", v3: "bet", tr: "bahis oynamak", pron: "/bet/" },
+            { v1: "bid", v2: "bid/bade", v3: "bid/bidden", tr: "fiyat teklif etmek, emretmek", pron: "/bɪd/" },
+            { v1: "bind", v2: "bound", v3: "bound", tr: "bağlamak, ciltlemek", pron: "/baɪnd/" },
+            { v1: "bite", v2: "bit", v3: "bitten", tr: "ısırmak", pron: "/baɪt/" },
+            { v1: "bleed", v2: "bled", v3: "bled", tr: "kanamak", pron: "/bliːd/" },
+            { v1: "blow", v2: "blew", v3: "blown", tr: "esmek, üflemek", pron: "/bləʊ/" },
+            { v1: "break", v2: "broke", v3: "broken", tr: "kırmak", pron: "/breɪk/" },
+            { v1: "breed", v2: "bred", v3: "bred", tr: "yetiştirmek, üretmek", pron: "/briːd/" },
+            { v1: "bring", v2: "brought", v3: "brought", tr: "getirmek", pron: "/brɪŋ/" },
+            { v1: "broadcast", v2: "broadcast", v3: "broadcast", tr: "yayın yapmak", pron: "/ˈbrɔːdkɑːst/" },
+            { v1: "build", v2: "built", v3: "built", tr: "inşa etmek", pron: "/bɪld/" },
+            { v1: "burn", v2: "burnt/burned", v3: "burnt/burned", tr: "yanmak", pron: "/bɜːn/" },
+            { v1: "burst", v2: "burst", v3: "burst", tr: "patlamak", pron: "/bɜːst/" },
+            { v1: "buy", v2: "bought", v3: "bought", tr: "satın almak", pron: "/baɪ/" },
+            { v1: "cast", v2: "cast", v3: "cast", tr: "atmak, rol vermek", pron: "/kɑːst/" },
+            { v1: "catch", v2: "caught", v3: "caught", tr: "yakalamak", pron: "/kætʃ/" },
+            { v1: "choose", v2: "chose", v3: "chosen", tr: "seçmek", pron: "/tʃuːz/" },
+            { v1: "cling", v2: "clung", v3: "clung", tr: "yapışmak, tutunmak", pron: "/klɪŋ/" },
+            { v1: "come", v2: "came", v3: "come", tr: "gelmek", pron: "/kʌm/" },
+            { v1: "cost", v2: "cost", v3: "cost", tr: "maliyet", pron: "/kɒst/" },
+            { v1: "creep", v2: "crept", v3: "crept", tr: "sürünmek", pron: "/kriːp/" },
+            { v1: "cut", v2: "cut", v3: "cut", tr: "kesmek", pron: "/kʌt/" },
+            { v1: "deal", v2: "dealt", v3: "dealt", tr: "anlaşmak, uğraşmak", pron: "/diːl/" },
+            { v1: "dig", v2: "dug", v3: "dug", tr: "kazmak", pron: "/dɪɡ/" },
+            { v1: "do", v2: "did", v3: "done", tr: "yapmak", pron: "/duː/" },
+            { v1: "draw", v2: "drew", v3: "drawn", tr: "çizmek, çekmek", pron: "/drɔː/" },
+            { v1: "dream", v2: "dreamt/dreamed", v3: "dreamt/dreamed", tr: "rüya görmek", pron: "/driːm/" },
+            { v1: "drink", v2: "drank", v3: "drunk", tr: "içmek", pron: "/drɪŋk/" },
+            { v1: "drive", v2: "drove", v3: "driven", tr: "sürmek", pron: "/draɪv/" },
+            { v1: "dwell", v2: "dwelt", v3: "dwelt", tr: "yaşamak, ikamet etmek", pron: "/dwel/" },
+            { v1: "eat", v2: "ate", v3: "eaten", tr: "yemek", pron: "/iːt/" },
+            { v1: "fall", v2: "fell", v3: "fallen", tr: "düşmek", pron: "/fɔːl/" },
+            { v1: "feed", v2: "fed", v3: "fed", tr: "beslemek", pron: "/fiːd/" },
+            { v1: "feel", v2: "felt", v3: "felt", tr: "hissetmek", pron: "/fiːl/" },
+            { v1: "fight", v2: "fought", v3: "fought", tr: "dövüşmek, savaşmak", pron: "/faɪt/" },
+            { v1: "find", v2: "found", v3: "found", tr: "bulmak", pron: "/faɪnd/" },
+            { v1: "flee", v2: "fled", v3: "fled", tr: "kaçmak", pron: "/fliː/" },
+            { v1: "fling", v2: "flung", v3: "flung", tr: "fırlatmak", pron: "/flɪŋ/" },
+            { v1: "fly", v2: "flew", v3: "flown", tr: "uçmak", pron: "/flaɪ/" },
+            { v1: "forbid", v2: "forbade", v3: "forbidden", tr: "yasaklamak", pron: "/fəˈbɪd/" },
+            { v1: "forecast", v2: "forecast", v3: "forecast", tr: "tahmin etmek", pron: "/ˈfɔːkɑːst/" },
+            { v1: "forget", v2: "forgot", v3: "forgotten", tr: "unutmak", pron: "/fəˈɡet/" },
+            { v1: "forgive", v2: "forgave", v3: "forgiven", tr: "affetmek", pron: "/fəˈɡɪv/" },
+            { v1: "forsake", v2: "forsook", v3: "forsaken", tr: "terk etmek", pron: "/fəˈseɪk/" },
+            { v1: "freeze", v2: "froze", v3: "frozen", tr: "donmak", pron: "/friːz/" },
+            { v1: "get", v2: "got", v3: "got/gotten", tr: "almak, edinmek", pron: "/ɡet/" },
+            { v1: "gild", v2: "gilt", v3: "gilt", tr: "yaldızlamak", pron: "/ɡɪld/" },
+            { v1: "give", v2: "gave", v3: "given", tr: "vermek", pron: "/ɡɪv/" },
+            { v1: "go", v2: "went", v3: "gone", tr: "gitmek", pron: "/ɡəʊ/" },
+            { v1: "grind", v2: "ground", v3: "ground", tr: "öğütmek", pron: "/ɡraɪnd/" },
+            { v1: "grow", v2: "grew", v3: "grown", tr: "büyümek", pron: "/ɡrəʊ/" },
+            { v1: "hang", v2: "hung", v3: "hung", tr: "asmak", pron: "/hæŋ/" },
+            { v1: "have", v2: "had", v3: "had", tr: "sahip olmak", pron: "/hæv/" },
+            { v1: "hear", v2: "heard", v3: "heard", tr: "duymak", pron: "/hɪə(r)/" },
+            { v1: "heave", v2: "hove/heaved", v3: "hove/heaved", tr: "kaldırmak, atmak", pron: "/hiːv/" },
+            { v1: "hew", v2: "hewed", v3: "hewn/hewed", tr: "yontmak, kesmek", pron: "/hjuː/" },
+            { v1: "hide", v2: "hid", v3: "hidden", tr: "saklamak", pron: "/haɪd/" },
+            { v1: "hit", v2: "hit", v3: "hit", tr: "vurmak", pron: "/hɪt/" },
+            { v1: "hold", v2: "held", v3: "held", tr: "tutmak", pron: "/həʊld/" },
+            { v1: "hurt", v2: "hurt", v3: "hurt", tr: "yaralamak, acıtmak", pron: "/hɜːt/" },
+            { v1: "keep", v2: "kept", v3: "kept", tr: "saklamak, korumak", pron: "/kiːp/" },
+            { v1: "kneel", v2: "knelt", v3: "knelt", tr: "diz çökmek", pron: "/niːl/" },
+            { v1: "knit", v2: "knit/knitted", v3: "knit/knitted", tr: "örmek", pron: "/nɪt/" },
+            { v1: "know", v2: "knew", v3: "known", tr: "bilmek", pron: "/nəʊ/" },
+            { v1: "lay", v2: "laid", v3: "laid", tr: "yaymak, sermek", pron: "/leɪ/" },
+            { v1: "lead", v2: "led", v3: "led", tr: "yol göstermek", pron: "/liːd/" },
+            { v1: "lean", v2: "leant/leaned", v3: "leant/leaned", tr: "yaslanmak", pron: "/liːn/" },
+            { v1: "leap", v2: "leapt/leaped", v3: "leapt/leaped", tr: "sıçramak", pron: "/liːp/" },
+            { v1: "learn", v2: "learnt/learned", v3: "learnt/learned", tr: "öğrenmek", pron: "/lɜːn/" },
+            { v1: "leave", v2: "left", v3: "left", tr: "ayrılmak, bırakmak", pron: "/liːv/" },
+            { v1: "lend", v2: "lent", v3: "lent", tr: "ödünç vermek", pron: "/lend/" },
+            { v1: "let", v2: "let", v3: "let", tr: "izin vermek", pron: "/let/" },
+            { v1: "lie", v2: "lay", v3: "lain", tr: "uzanmak", pron: "/laɪ/" },
+            { v1: "light", v2: "lit", v3: "lit", tr: "yakmak, aydınlatmak", pron: "/laɪt/" },
+            { v1: "lose", v2: "lost", v3: "lost", tr: "kaybetmek", pron: "/luːz/" },
+            { v1: "make", v2: "made", v3: "made", tr: "yapmak", pron: "/meɪk/" },
+            { v1: "mean", v2: "meant", v3: "meant", tr: "anlamına gelmek", pron: "/miːn/" },
+            { v1: "meet", v2: "met", v3: "met", tr: "buluşmak, tanışmak", pron: "/miːt/" },
+            { v1: "melt", v2: "melted", v3: "molten/melted", tr: "erimek", pron: "/melt/" },
+            { v1: "mistake", v2: "mistook", v3: "mistaken", tr: "hata yapmak", pron: "/mɪˈsteɪk/" },
+            { v1: "mow", v2: "mowed", v3: "mown/mowed", tr: "biçmek (çim)", pron: "/məʊ/" },
+            { v1: "overcome", v2: "overcame", v3: "overcome", tr: "üstesinden gelmek", pron: "/ˌəʊvəˈkʌm/" },
+            { v1: "overdo", v2: "overdid", v3: "overdone", tr: "aşırıya kaçmak", pron: "/ˌəʊvəˈduː/" },
+            { v1: "overtake", v2: "overtook", v3: "overtaken", tr: "sollamak, geçmek", pron: "/ˌəʊvəˈteɪk/" },
+            { v1: "overthrow", v2: "overthrew", v3: "overthrown", tr: "devirmek", pron: "/ˌəʊvəˈθrəʊ/" },
+            { v1: "pay", v2: "paid", v3: "paid", tr: "ödemek", pron: "/peɪ/" },
+            { v1: "put", v2: "put", v3: "put", tr: "koymak", pron: "/pʊt/" },
+            { v1: "read", v2: "read", v3: "read", tr: "okumak", pron: "/riːd/" },
+            { v1: "rend", v2: "rent", v3: "rent", tr: "parçalamak", pron: "/rend/" },
+            { v1: "rid", v2: "rid", v3: "rid", tr: "kurtarmak, başından atmak", pron: "/rɪd/" },
+            { v1: "ride", v2: "rode", v3: "ridden", tr: "binmek (at, bisiklet)", pron: "/raɪd/" },
+            { v1: "ring", v2: "rang", v3: "rung", tr: "çalmak (zil/telefon)", pron: "/rɪŋ/" },
+            { v1: "rise", v2: "rose", v3: "risen", tr: "yükselmek, doğmak", pron: "/raɪz/" },
+            { v1: "run", v2: "ran", v3: "run", tr: "koşmak", pron: "/rʌn/" },
+            { v1: "saw", v2: "sawed", v3: "sawn/sawed", tr: "testereyle kesmek", pron: "/sɔː/" },
+            { v1: "say", v2: "said", v3: "said", tr: "söylemek", pron: "/seɪ/" },
+            { v1: "see", v2: "saw", v3: "seen", tr: "görmek", pron: "/siː/" },
+            { v1: "seek", v2: "sought", v3: "sought", tr: "aramak", pron: "/siːk/" },
+            { v1: "sell", v2: "sold", v3: "sold", tr: "satmak", pron: "/sel/" },
+            { v1: "send", v2: "sent", v3: "sent", tr: "göndermek", pron: "/send/" },
+            { v1: "set", v2: "set", v3: "set", tr: "kurmak", pron: "/set/" },
+            { v1: "sew", v2: "sewed", v3: "sewn/sewed", tr: "dikmek", pron: "/səʊ/" },
+            { v1: "shake", v2: "shook", v3: "shaken", tr: "sallamak", pron: "/ʃeɪk/" },
+            { v1: "shear", v2: "sheared", v3: "shorn/sheared", tr: "kırkmak", pron: "/ʃɪə(r)/" },
+            { v1: "shed", v2: "shed", v3: "shed", tr: "dökmek (kan, gözyaşı)", pron: "/ʃed/" },
+            { v1: "shine", v2: "shone", v3: "shone", tr: "parlamak", pron: "/ʃaɪn/" },
+            { v1: "shoe", v2: "shod", v3: "shod", tr: "nal çakmak", pron: "/ʃuː/" },
+            { v1: "shoot", v2: "shot", v3: "shot", tr: "ateş etmek", pron: "/ʃuːt/" },
+            { v1: "show", v2: "showed", v3: "shown/showed", tr: "göstermek", pron: "/ʃəʊ/" },
+            { v1: "shrink", v2: "shrank/shrunk", v3: "shrunk", tr: "çekmek, daralmak", pron: "/ʃrɪŋk/" },
+            { v1: "shrive", v2: "shrove", v3: "shriven", tr: "günah çıkartmak", pron: "/ʃraɪv/" },
+            { v1: "shut", v2: "shut", v3: "shut", tr: "kapatmak", pron: "/ʃʌt/" },
+            { v1: "sing", v2: "sang", v3: "sung", tr: "şarkı söylemek", pron: "/sɪŋ/" },
+            { v1: "sink", v2: "sunk", v3: "sunk", tr: "batmak", pron: "/sɪŋk/" },
+            { v1: "sit", v2: "sat", v3: "sat", tr: "oturmak", pron: "/sɪt/" },
+            { v1: "slay", v2: "slew", v3: "slain", tr: "katletmek", pron: "/sleɪ/" },
+            { v1: "sleep", v2: "slept", v3: "slept", tr: "uyumak", pron: "/sliːp/" },
+            { v1: "slide", v2: "slid", v3: "slid", tr: "kaymak", pron: "/sliːp/" },
+            { v1: "sling", v2: "slung", v3: "slung", tr: "fırlatmak", pron: "/slɪŋ/" },
+            { v1: "slink", v2: "slunk", v3: "slunk", tr: "sessizce sıvışmak", pron: "/slɪŋk/" },
+            { v1: "slit", v2: "slit", v3: "slit", tr: "yarmak, dilmek", pron: "/slɪt/" },
+            { v1: "smell", v2: "smelt/smelled", v3: "smelt/smelled", tr: "koklamak", pron: "/smel/" },
+            { v1: "smite", v2: "smote", v3: "smitten", tr: "çarpmak, vurmak", pron: "/smaɪt/" },
+            { v1: "sow", v2: "sowed", v3: "sown/sowed", tr: "tohum ekmek", pron: "/səʊ/" },
+            { v1: "speak", v2: "spoke", v3: "spoken", tr: "konuşmak", pron: "/spiːk/" },
+            { v1: "speed", v2: "sped/speeded", v3: "sped/speeded", tr: "hız yapmak", pron: "/spiːd/" },
+            { v1: "spell", v2: "spelt/spelled", v3: "spelt/spelled", tr: "hecelemek", pron: "/spel/" },
+            { v1: "spend", v2: "spent", v3: "spent", tr: "harcamak", pron: "/spend/" },
+            { v1: "spill", v2: "spilt/spilled", v3: "spilt/spilled", tr: "dökmek (sıvı)", pron: "/spɪl/" },
+            { v1: "spin", v2: "spun", v3: "spun", tr: "döndürmek, örmek", pron: "/spɪn/" },
+            { v1: "spit", v2: "spat", v3: "spat", tr: "tükürmek", pron: "/spɪt/" },
+            { v1: "split", v2: "split", v3: "split", tr: "bölmek, ayırmak", pron: "/splɪt/" },
+            { v1: "spoil", v2: "spoilt/spoiled", v3: "spoilt/spoiled", tr: "bozmak, şımartmak", pron: "/spɔɪl/" },
+            { v1: "spread", v2: "spread", v3: "spread", tr: "yaymak", pron: "/spred/" },
+            { v1: "spring", v2: "sprang", v3: "sprung", tr: "sıçramak, fırlamak", pron: "/sprɪŋ/" },
+            { v1: "stand", v2: "stood", v3: "stood", tr: "ayakta durmak", pron: "/stænd/" },
+            { v1: "stave", v2: "stove/staved", v3: "stove/staved", tr: "delmek, kırmak", pron: "/steɪv/" },
+            { v1: "steal", v2: "stole", v3: "stolen", tr: "çalmak", pron: "/stiːl/" },
+            { v1: "stick", v2: "stuck", v3: "stuck", tr: "yapıştırmak", pron: "/stɪk/" },
+            { v1: "sting", v2: "stung", v3: "stung", tr: "sokmak (arı vb.)", pron: "/stɪŋ/" },
+            { v1: "stink", v2: "stank", v3: "stunk", tr: "kokmak", pron: "/stɪŋk/" },
+            { v1: "strew", v2: "strewed", v3: "strewn/strewed", tr: "serpmek, saçmak", pron: "/struː/" },
+            { v1: "stride", v2: "strode", v3: "stridden", tr: "uzun adımlarla yürümek", pron: "/straɪd/" },
+            { v1: "strike", v2: "struck", v3: "struck", tr: "vurmak, çarpmak", pron: "/straɪk/" },
+            { v1: "string", v2: "strung", v3: "strung", tr: "dizmek, asmak", pron: "/strɪŋ/" },
+            { v1: "strive", v2: "strove", v3: "striven", tr: "çabalamak", pron: "/straɪv/" },
+            { v1: "swear", v2: "swore", v3: "sworn", tr: "yemin etmek, küfretmek", pron: "/sweə(r)/" },
+            { v1: "sweat", v2: "sweat/sweated", v3: "sweat/sweated", tr: "terlemek", pron: "/swet/" },
+            { v1: "sweep", v2: "swept", v3: "swept", tr: "süpürmek", pron: "/swiːp/" },
+            { v1: "swell", v2: "swelled", v3: "swollen/swelled", tr: "şişmek", pron: "/swel/" },
+            { v1: "swim", v2: "swam", v3: "swum", tr: "yüzmek", pron: "/swɪm/" },
+            { v1: "swing", v2: "swung", v3: "swung", tr: "sallanmak", pron: "/swɪŋ/" },
+            { v1: "take", v2: "took", v3: "taken", tr: "almak", pron: "/teɪk/" },
+            { v1: "teach", v2: "taught", v3: "taught", tr: "öğretmek", pron: "/tiːtʃ/" },
+            { v1: "tear", v2: "teə(r)", v3: "torn", tr: "yırtmak", pron: "/teə(r)/" },
+            { v1: "tell", v2: "told", v3: "told", tr: "anlatmak", pron: "/tel/" },
+            { v1: "think", v2: "thought", v3: "thought", tr: "düşünmek", pron: "/θɪŋk/" },
+            { v1: "thrive", v2: "throve/thrived", v3: "thriven/thrived", tr: "gelişmek, serpilmek", pron: "/θraɪv/" },
+            { v1: "throw", v2: "threw", v3: "thrown", tr: "fırlatmak", pron: "/θrəʊ/" },
+            { v1: "thrust", v2: "thrust", v3: "thrust", tr: "itmek, saplamak", pron: "/θrʌst/" },
+            { v1: "tread", v2: "trod", v3: "trodden", tr: "üstüne basmak", pron: "/tred/" },
+            { v1: "understand", v2: "understood", v3: "understood", tr: "anlamak", pron: "/ˌʌndəˈstænd/" },
+            { v1: "undertake", v2: "undertook", v3: "undertaken", tr: "üstlenmek", pron: "/ˌʌndəˈteɪk/" },
+            { v1: "upset", v2: "upset", v3: "upset", tr: "üzmek, alt üst etmek", pron: "/ˌʌpˈset/" },
+            { v1: "wake", v2: "woke", v3: "woken", tr: "uyanmak", pron: "/weɪk/" },
+            { v1: "wear", v2: "wore", v3: "worn", tr: "giymek", pron: "/weə(r)/" },
+            { v1: "weave", v2: "wove", v3: "woven", tr: "dokumak", pron: "/wiːv/" },
+            { v1: "wed", v2: "wed/wedded", v3: "wed/wedded", tr: "evlenmek", pron: "/wed/" },
+            { v1: "weep", v2: "wept", v3: "wept", tr: "ağlamak", pron: "/wiːp/" },
+            { v1: "win", v2: "won", v3: "won", tr: "kazanmak", pron: "/wɪn/" },
+            { v1: "wind", v2: "wound", v3: "wound", tr: "sarmak, kurmak (saat vb.)", pron: "/waɪnd/" },
+            { v1: "withdraw", v2: "withdrew", v3: "withdrawn", tr: "geri çekilmek", pron: "/wɪðˈdrɔː/" },
+            { v1: "withstand", v2: "withstood", v3: "withstood", tr: "karşı koymak", pron: "/wɪðˈstænd/" },
+            { v1: "wring", v2: "wrung", v3: "wrung", tr: "burkmak, sıkmak", pron: "/rɪŋ/" },
+            { v1: "write", v2: "wrote", v3: "written", tr: "yazmak", pron: "/raɪt/" }
+        ];
+
+
+
+/* ==================================================
+   AYARLAR
+   ================================================== */
+
+let questionCount = 10;
+
+let mode = "mixed";
+
+let questions = [];
+
+let currentQuestion = 0;
+
+let score = 0;
+
+let wrongAnswers = [];
+
+
+/* ==================================================
+   SEÇİMLER
+   ================================================== */
+
+function selectCount(count) {
+
+    questionCount = count;
+
+    document.querySelectorAll("#count10,#count20,#count30")
+        .forEach(button => {
+
+            button.classList.remove("active");
+
+        });
+
+    document
+        .getElementById("count" + count)
+        .classList.add("active");
+
 }
 
-function processEnglishSentence() {
-    let input = document.getElementById('ti').value.toLowerCase().trim();
-    const resDiv = document.getElementById('res');
-    
-    if (!input) {
-        resDiv.innerHTML = '<div class="empty-state">Düzensiz (180+) veya düzenli, tüm fiilleri doğru çekimleyebilirim...</div>';
+
+function selectMode(selectedMode) {
+
+    mode = selectedMode;
+
+    document.querySelectorAll(
+        "#modeMixed,#modeV2,#modeV3,#modeTR"
+    ).forEach(button => {
+
+        button.classList.remove("active");
+
+    });
+
+
+    const ids = {
+
+        mixed: "modeMixed",
+
+        v2: "modeV2",
+
+        v3: "modeV3",
+
+        tr: "modeTR"
+
+    };
+
+
+    document
+        .getElementById(ids[selectedMode])
+        .classList.add("active");
+
+}
+
+
+/* ==================================================
+   KARIŞTIR
+   ================================================== */
+
+function shuffle(array) {
+
+    for (
+        let i = array.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[j]] =
+            [array[j], array[i]];
+
+    }
+
+    return array;
+
+}
+
+
+/* ==================================================
+   TEST BAŞLAT
+   ================================================== */
+
+function startTest() {
+
+    score = 0;
+
+    currentQuestion = 0;
+
+    wrongAnswers = [];
+
+
+    questions = shuffle([...verbs])
+        .slice(
+            0,
+            Math.min(questionCount, verbs.length)
+        );
+
+
+    document
+        .getElementById("startScreen")
+        .style.display = "none";
+
+
+    document
+        .getElementById("resultScreen")
+        .style.display = "none";
+
+
+    document
+        .getElementById("testScreen")
+        .style.display = "block";
+
+
+    showQuestion();
+
+}
+
+
+/* ==================================================
+   SORU OLUŞTUR
+   ================================================== */
+
+function createQuestion(verb) {
+
+    let type = mode;
+
+
+    if (mode === "mixed") {
+
+        const types = ["v2", "v3", "tr"];
+
+        type =
+            types[
+                Math.floor(
+                    Math.random() * types.length
+                )
+            ];
+
+    }
+
+
+    let question;
+
+    let correct;
+
+
+    if (type === "v2") {
+
+        question = verb.v1;
+
+        correct = verb.v2;
+
+    }
+
+    else if (type === "v3") {
+
+        question = verb.v1;
+
+        correct = verb.v3;
+
+    }
+
+    else {
+
+        question = verb.tr;
+
+        correct = verb.v1;
+
+    }
+
+
+    return {
+
+        verb,
+        type,
+        question,
+        correct
+
+    };
+
+}
+
+
+/* ==================================================
+   SORUYU GÖSTER
+   ================================================== */
+
+function showQuestion() {
+
+    const q =
+        createQuestion(
+            questions[currentQuestion]
+        );
+
+
+    questions[currentQuestion] = q;
+
+
+    document
+        .getElementById("questionNumber")
+        .textContent =
+        `Soru ${currentQuestion + 1} / ${questions.length}`;
+
+
+    document
+        .getElementById("scoreText")
+        .textContent =
+        `Puan: ${score}`;
+
+
+    const progress =
+        (currentQuestion /
+        questions.length) * 100;
+
+
+    document
+        .getElementById("progressFill")
+        .style.width =
+        progress + "%";
+
+
+    let typeText;
+
+
+    if (q.type === "v2") {
+
+        typeText = "V1 → V2";
+
+    }
+
+    else if (q.type === "v3") {
+
+        typeText = "V1 → V3";
+
+    }
+
+    else {
+
+        typeText = "TÜRKÇE → V1";
+
+    }
+
+
+    document
+        .getElementById("questionType")
+        .textContent =
+        typeText;
+
+
+    document
+        .getElementById("question")
+        .textContent =
+        q.question;
+
+
+    document
+        .getElementById("feedback")
+        .textContent =
+        "";
+
+
+    document
+        .getElementById("nextButton")
+        .style.display =
+        "none";
+
+
+    createAnswers(q);
+
+}
+
+
+/* ==================================================
+   CEVAPLAR
+   ================================================== */
+
+function createAnswers(q) {
+
+    let pool;
+
+
+    if (q.type === "v2") {
+
+        pool = verbs.map(v => v.v2);
+
+    }
+
+    else if (q.type === "v3") {
+
+        pool = verbs.map(v => v.v3);
+
+    }
+
+    else {
+
+        pool = verbs.map(v => v.v1);
+
+    }
+
+
+    pool =
+        [...new Set(pool)]
+        .filter(answer => answer !== q.correct);
+
+
+    shuffle(pool);
+
+
+    const answers =
+        shuffle([
+            q.correct,
+            ...pool.slice(0, 3)
+        ]);
+
+
+    const container =
+        document.getElementById("answers");
+
+
+    container.innerHTML = "";
+
+
+    answers.forEach(answer => {
+
+        const button =
+            document.createElement("button");
+
+
+        button.className =
+            "answer-button";
+
+
+        button.textContent =
+            answer;
+
+
+        button.onclick =
+            () => checkAnswer(
+                button,
+                answer,
+                q
+            );
+
+
+        container.appendChild(button);
+
+    });
+
+}
+
+
+/* ==================================================
+   CEVABI KONTROL
+   ================================================== */
+
+function checkAnswer(button, answer, q) {
+
+    const buttons =
+        document.querySelectorAll(
+            ".answer-button"
+        );
+
+
+    buttons.forEach(btn => {
+
+        btn.disabled = true;
+
+    });
+
+
+    if (answer === q.correct) {
+
+        button.classList.add("correct");
+
+        score++;
+
+
+        document
+            .getElementById("feedback")
+            .innerHTML =
+            '<span style="color:#4ade80">✓ DOĞRU!</span>';
+
+    }
+
+    else {
+
+        button.classList.add("wrong");
+
+
+        buttons.forEach(btn => {
+
+            if (
+                btn.textContent === q.correct
+            ) {
+
+                btn.classList.add("correct");
+
+            }
+
+        });
+
+
+        wrongAnswers.push({
+
+            question: q.question,
+
+            selected: answer,
+
+            correct: q.correct
+
+        });
+
+
+        document
+            .getElementById("feedback")
+            .innerHTML =
+            `<span style="color:#f87171">
+                ✗ Yanlış! Doğru cevap: ${q.correct}
+            </span>`;
+
+    }
+
+
+    document
+        .getElementById("scoreText")
+        .textContent =
+        `Puan: ${score}`;
+
+
+    document
+        .getElementById("nextButton")
+        .style.display =
+        "block";
+
+}
+
+
+/* ==================================================
+   SONRAKİ SORU
+   ================================================== */
+
+function nextQuestion() {
+
+    currentQuestion++;
+
+
+    if (
+        currentQuestion >=
+        questions.length
+    ) {
+
+        showResult();
+
+    }
+
+    else {
+
+        showQuestion();
+
+    }
+
+}
+
+
+/* ==================================================
+   SONUÇ
+   ================================================== */
+
+function showResult() {
+
+    document
+        .getElementById("testScreen")
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById("resultScreen")
+        .style.display =
+        "block";
+
+
+    const total =
+        questions.length;
+
+
+    const percentage =
+        Math.round(
+            (score / total) * 100
+        );
+
+
+    document
+        .getElementById("finalScore")
+        .textContent =
+        `${score} / ${total}`;
+
+
+    document
+        .getElementById("percentage")
+        .textContent =
+        `%${percentage} Başarı`;
+
+
+    const wrongList =
+        document.getElementById(
+            "wrongList"
+        );
+
+
+    wrongList.innerHTML = "";
+
+
+    if (
+        wrongAnswers.length === 0
+    ) {
+
+        wrongList.innerHTML = `
+            <div style="
+                color:#4ade80;
+                font-weight:700;
+            ">
+                🎯 Mükemmel! Hiç yanlış yapmadın.
+            </div>
+        `;
+
         return;
+
     }
 
-    const words = input.split(/\s+/);
-    let detectedSubject = "I"; 
-    let detectedVerbBase = null;
-    let restOfSentence = [];
-    let foundVerb = false;
 
-    for (let i = 0; i < words.length; i++) {
-        let cleanWord = words[i].replace(/[.?!,]/g, "");
-        
-        if (subjects.includes(cleanWord) && i === 0) {
-            detectedSubject = cleanWord.charAt(0).toUpperCase() + cleanWord.slice(1);
-            continue;
-        }
-
-        if (!foundVerb) {
-            let base = cleanWord;
-            if (base === "does") base = "do";
-            else if (base === "goes") base = "go";
-            else if (base === "has") base = "have";
-            else if (base === "sees") base = "see";
-            else if (base === "plays") base = "play";
-            else if (base.endsWith('ies')) base = base.slice(0, -3) + 'y';
-            else if (base.endsWith('es') && base.length > 4 && !["see", "free"].includes(base)) {
-                base = base.slice(0, -2);
-            }
-            else if (base.endsWith('s') && base.length > 3 && !base.endsWith('ss')) {
-                base = base.slice(0, -1);
-            }
-            
-            detectedVerbBase = base;
-            foundVerb = true;
-        } else {
-            restOfSentence.push(words[i]);
-        }
-    }
-
-    if (!detectedVerbBase) return;
-
-    let v2, v3, tr;
-    
-    if (irregularVerbs[detectedVerbBase]) {
-        const entry = irregularVerbs[detectedVerbBase];
-        v2 = entry.v2;
-        v3 = entry.v3;
-        tr = entry.tr;
-    } else {
-        v2 = conjugateRegular(detectedVerbBase);
-        v3 = v2;
-        tr = "düzenli fiil";
-    }
-
-    const rest = restOfSentence.join(" ");
-    let aux = (["He", "She", "It"].includes(detectedSubject)) ? "has" : "have";
-    
-    if (detectedVerbBase === "be" || detectedVerbBase === "am" || detectedVerbBase === "is" || detectedVerbBase === "are") {
-        v2 = (["I", "He", "She", "It"].includes(detectedSubject)) ? "was" : "were";
-    }
-
-    resDiv.innerHTML = `
-        <div class="sentence-card">
-            <div class="subject-badge">${detectedSubject.toUpperCase()}</div>
-            <h2 style="margin:0 0 20px 0; font-family:'Orbitron', sans-serif; color:var(--text); letter-spacing:1px; font-size:1.4rem;">
-                ${detectedVerbBase.toUpperCase()} <span style="font-size:0.9rem; color:var(--muted); font-weight:400; font-family:'Inter'">(${tr})</span>
-            </h2>
-            
-            <div class="variant">
-                <span class="v-tag">V2 - Geçmiş Zaman (Past)</span>
-                <div class="sentence-text">${detectedSubject} <span class="highlight">${v2}</span> ${rest}</div>
-            </div>
-            
-            <div class="variant">
-                <span class="v-tag">V3 - Yakın Geçmiş (Perfect)</span>
-                <div class="sentence-text">${detectedSubject} ${aux} <span class="highlight">${v3}</span> ${rest}</div>
-            </div>
+    wrongList.innerHTML = `
+        <div class="section-title">
+            YANLIŞ YAPTIĞIN SORULAR
         </div>
     `;
+
+
+    wrongAnswers.forEach(item => {
+
+        const div =
+            document.createElement("div");
+
+
+        div.className =
+            "wrong-item";
+
+
+        div.innerHTML = `
+
+            <div class="wrong-question">
+                ${item.question}
+            </div>
+
+            <div class="wrong-your">
+                Senin cevabın: ${item.selected}
+            </div>
+
+            <div class="wrong-correct">
+                Doğru cevap: ${item.correct}
+            </div>
+
+        `;
+
+
+        wrongList.appendChild(div);
+
+    });
+
 }
+
+
+/* ==================================================
+   TEKRAR
+   ================================================== */
+
+function restartTest() {
+
+    document
+        .getElementById("resultScreen")
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById("startScreen")
+        .style.display =
+        "block";
+
+}
+
 </script>
+
 </body>
 </html>
